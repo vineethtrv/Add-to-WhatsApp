@@ -1,0 +1,20 @@
+{
+    "name": "WhatsApp to unsaved numbers",
+    "short_name": "WhatsApp to Number",
+    "start_url": ".",
+    "background_color": "#f5f5f5",
+    "theme_color": "#128C7E",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
