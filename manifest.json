@@ -1,15 +1,18 @@
 {
     "name": "WhatsApp to unsaved numbers",
-    "short_name": "WhatsApp to Number",
+    "short_name": "Add to WhatsApp",
+    "description" : "Send WhatsApp messages to unsaved numbers",
     "start_url": ".",
-    "background_color": "#f5f5f5",
+    "background_color": "#25d366",
     "theme_color": "#128C7E",
     "display": "standalone",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "images/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+             "purpose": "any maskable"
         },
         {
             "src": "images/android-chrome-512x512.png",

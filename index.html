@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp to unsaved numbers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Add to WhatsApp | WhatsApp to unsaved numbers</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -12,8 +14,6 @@
     <meta name="msapplication-TileColor" content="#25d366">
     <meta name="theme-color" content="#128C7E">
     <link rel="manifest" href="manifest.json">
-  
-
 
     <!--SEO -->
 
@@ -42,241 +42,51 @@
     <meta property="twitter:title" content="WhatsApp to unsaved numbers">
     <meta property="twitter:description" content="Send WhatsApp messages to unsaved numbers">
     <meta property="twitter:image" content="images/seo.png">
-
     <!-- SEO -->
 
-
-
-  
-  <!-- Styles -->
-    <style>
-        * , *::after , *::before {
-            box-sizing: border-box;
-        }
-        :root{
-            font-size: 1vw;
-        }
-        @media(max-width: 1360px){
-            :root{ font-size: 1.5vw }
-        }
-        @media(max-width: 1024px){
-            :root{ font-size: 2vw }
-        }
-        @media(max-width: 768px){
-            :root{ font-size: 3vw }
-        }
-        
-
-        body{
-            height: 100vh;
-            margin: 0;
-            position: relative;
-            place-items: center;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-        }
-        
-        .form{
-            display: flex;
-            width: 100%;
-            padding: 0 20px;
-            max-width: 740px;
-            position: fixed;
-            left: 50%;
-            top: 25%;
-            transform: translateX(-50%);
-        }
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-        }
-        input[type=number] {
-        -moz-appearance: textfield;
-        }
-        input{
-            display: block;
-            width: 100%;
-            border:none;
-            outline: none;
-            background-color:#fff;
-            border-radius: 50rem;
-            height: 5rem;
-            padding: 1rem 5.25rem 1rem 2rem;
-            font-size: 2rem;
-            color: #4c4c4c;
-            box-shadow: 0 0 2rem 0.25rem rgba(0,0,0,0.05);
-        }
-        input:not(:empty) + #placeholder , 
-        input:focus + #placeholder , 
-        input:active + #placeholder {
-            display: none;
-        }
-        button{
-            width:5rem ;
-            height:5rem ;
-            border-radius: 50%;
-            border: none;
-            outline: none;
-            background-color: currentColor;
-            color: #25d366;
-            position:absolute;
-            right: 20px;
-            top: 0;
-            cursor: pointer;
-            transition: background 0.3s ease-in;
-        }
-        button:disabled{
-            opacity: 0.75;
-            color: #bdbdbd;
-            pointer-events: none;
-        }
-        button:after ,  button:before {
-            content: '';
-            position: absolute;
-            left: 65%;
-            top: 50%;
-            transform: translate(-50% , -50%);
-            border: 1rem solid transparent;
-            border-left: 2rem solid #fff;
-        }
-        button:after{
-            border: 0.25rem solid transparent;
-            border-left: 1.5rem solid currentColor;
-            left: 50%;
-            transform: translate(-70% , -50%);
-        }
-        #placeholder{
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: flex;
-            position: absolute;
-            left: 20px;
-            width: calc(100% - 20px);
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            padding: 1rem 5.25rem 1rem 2rem;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        #placeholder li {
-            margin: 0;
-            padding: 0;
-            opacity: 0;
-            white-space: pre-wrap;
-            animation: fade 0.3s ease-in;
-            animation-fill-mode: forwards;
-            color: #4c4c4c;
-        }
-        @keyframes fade {
-            0% { opacity: 0}
-            100% { opacity: 1}
-        }
-
-        footer{
-            position:fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 0.5rem;
-            background-color: rgba(0,0,0,0.1);
-            font-size: 14px;
-        }
-        a {
-            text-decoration: none;
-            color: #444;
-        }
-
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
     <div class="form">
-        <input placeholder="Phone Number..." name="mobile-number" id="mobile-number" type="number">
-        <ul id="placeholder"></ul>
+        <div class="country-dropdown">
+            <span id="country-select">91</span>
+        </div>
+        <input placeholder="Enter Phone Number..." name="mobile-number" id="mobile-number" type="number">
         <button disabled type="button" id="send-btn"></button>
     </div>
 
+    <!-- overlay -->
+    <div class="overlay">
+        <div class="popup">
+            <input placeholder="Search country.." id="country-seacrh" type="text">
+            <ul id="country-list"></ul>
+            <button id="close-popup" type="button"> Cancel</button>
+        </div>
+    </div>
 
-<footer>
-    👨‍💻
-    <a target="_blank" href="https://vineethtrv.github.io/">Vineeth TR</a>
-</footer>
+
+    <footer>
+        <a target="_blank" href="https://vineethtrv.github.io/">
+            👨‍💻 Vineeth TR
+        </a>
+    </footer>
 
 
-<script>
-    const mobileNumber = document.getElementById('mobile-number');
-    const sendBtn = document.getElementById('send-btn');
-    const placeholder = document.getElementById('placeholder');
-    let placeholderText = ['Enter Mobile number', 'With country code', 'Ex: Enter indian number'  , '91XXXXXXXXXX' ]
-    let i = 1;
-
-    let placeholderAnim = setInterval(()=> {
-        i = i >= (placeholderText.length -1) ? 0: ++i;
-        mobileNumber.placeholder = '';
-        placeholder.innerHTML = '';
-        let placeText = placeholderText[i];
-        
-        for(let x = 0; x < placeText.length; x++ ){
-            setTimeout(()=>{
-                let li = document.createElement('li');
-                li.innerText = placeText[x];
-                placeholder.appendChild(li);
-            }, (x * 200) )
+    <script type="text/javascript" src="app.js"></script>
+    <script>
+        // PWA
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js").then(registration => {
+                console.log("Sw registered");
+            }).catch(err => {
+                console.log("Sw registration failed", err);
+            })
         }
-
-    }, 6000)
-
-
-
-    // On Keypress
-    mobileNumber.addEventListener('keyup', e=> {
-
-        let val = e.target.value.replace("+", "");
-         e.target.value = val;
-        placeholder.style.display = val.length? 'none': 'flex' ;
-
-
-        if (val.length > 10) {
-            sendBtn.removeAttribute('disabled');
-            placeholder.style.display = 'none';
-            // open whatsApp on enter press 
-            if(e.key == "Enter" || e.keyCode == 13){
-                openWhatsApp()
-            }
-            
-        }else{
-            sendBtn.setAttribute('disabled' , true);
-        }
-    })
-
-
-    // On send button tap
-    sendBtn.addEventListener('click' , e => {
-        e.preventDefault();
-        openWhatsApp();
-    })
-
-    // Open WhatsApp
-    function openWhatsApp(){
-        let url = 'https://wa.me/';
-        url += mobileNumber.value;
-        window.open(url, '_blank').focus();
-    }
-
-
-    // PWA
-    if("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js").then(registration =>{
-            console.log("Sw registered");
-        }).catch(err => {
-             console.log("Sw registration failed", err);
-        })
-    }
-</script>
+    </script>
 
 </body>
+
 </html>

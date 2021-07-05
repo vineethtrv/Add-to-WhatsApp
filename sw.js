@@ -5,6 +5,8 @@ self.addEventListener('install' , e => {
         caches.open('static').then(cache => {
             return cache.addAll([
                 './' , 
+                './styles.css' , 
+                './app.js' , 
                 './images/android-chrome-192x192.png' 
             ])
         })
