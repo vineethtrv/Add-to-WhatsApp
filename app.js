@@ -82,7 +82,7 @@ country.forEach(cnt => {
 
 
 // Country search filter
-document.getElementById('country-seacrh').addEventListener('input', e => {
+document.getElementById('country-search').addEventListener('input', e => {
     let val = e.target.value.toLowerCase();
     document.querySelectorAll('#country-list li').forEach((item) => {
         let text = item.innerText.toLocaleLowerCase();
