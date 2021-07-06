@@ -50,6 +50,19 @@
 
 <body>
 
+    <!-- Install popup -->
+    <div id="install-pop">
+        <h2>Install</h2>
+        <div class="pop-cont">
+            <h1>
+                Send WhatsApp messages without saving unknown number.
+            </h1>
+            <button id="install-btn" type="btn">Install</button>
+        </div>
+    </div>
+    <!--  -->
+
+
     <div class="form">
         <div class="country-dropdown">
             <span id="country-select">91</span>
@@ -85,6 +98,37 @@
                 console.log("Sw registration failed", err);
             })
         }
+
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            showInstallPromotion();
+            console.log(`'beforeinstallprompt' event was fired.`);
+        });
+
+
+
+
+        function showInstallPromotion() {
+            document.getElementById('install-pop').classList.add('show');
+        }
+
+        function hideInstallPromotion() {
+            document.getElementById('install-pop').classList.remove('show');
+        }
+
+         document.getElementById('install-btn').addEventListener('click', async () => {
+            hideInstallPromotion();
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log(`User response to the install prompt: ${outcome}`);
+            deferredPrompt = null;
+        });
+
+
+
     </script>
 
 </body>

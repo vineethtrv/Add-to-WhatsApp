@@ -1,4 +1,3 @@
-
 // Install service worker
 self.addEventListener('install' , e => {
     e.waitUntil(

@@ -190,6 +190,61 @@ input{
     margin: 10px auto 0;
 }
 
+
+#install-pop{
+    width: 100%;
+    position: fixed;
+    max-width: 640px;
+    background: #25d366;
+    color: #fff;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    z-index: 5000;
+    border-radius: 1rem;
+    display: none;
+}
+#install-pop.show{
+    display: block;
+}
+
+#install-pop h2 { 
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+#install-pop h1 { 
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+
+}
+
+#install-btn {
+    border: 1px solid #fff;
+    outline: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    color: #25d366;
+    display: block;
+    margin: auto;
+}
+
+@media(max-width: 767px){
+    #install-pop h2 { font-size: 22px }
+    #install-pop h1 { font-size: 16px }
+    #install-btn  { 
+        font-size: 22px;
+        padding: 0.75rem 4rem;
+    }
+}
+
+
 footer{
     position:fixed;
     left: 0;
