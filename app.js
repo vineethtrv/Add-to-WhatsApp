@@ -10,7 +10,7 @@
         let val = e.target.value.replace("+", "");
          e.target.value = val;
 
-        if (val.length > 9) {
+        if (val.length > 7) {
             sendBtn.removeAttribute('disabled');
             // open whatsApp on enter press 
             if(e.key == "Enter" || e.keyCode == 13){
