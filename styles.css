@@ -118,19 +118,15 @@ margin: 0;
 
 input::-webkit-input-placeholder { 
   color: #c4c4c4;
-  font-size: 1.9rem
 }
 input::-moz-placeholder { 
   color: #c4c4c4;
-  font-size: 1.9rem
 }
 input:-ms-input-placeholder { 
     color: #c4c4c4;
-    font-size: 1.9rem
 }
 input:-moz-placeholder {
     color: #c4c4c4;
-    font-size: 1.9rem
 }
 
 

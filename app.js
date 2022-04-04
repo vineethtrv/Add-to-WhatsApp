@@ -4,7 +4,7 @@ let wordIndex = 0;
 let pctIndex = 0;
 // Fid default country code
 let mobileNumber = '';
-let palceholderTexts = ['Enter Phone Number With Dial Code...' , '91 9876543210'];
+let palceholderTexts = ['Enter Phone Number', 'With Dial Code...' , '91 9876543210'];
 // On Keypress
 mobileNumberEl.addEventListener('keyup', e=> {
 
