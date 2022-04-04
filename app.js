@@ -6,13 +6,18 @@ let pctIndex = 0;
 let mobileNumber = '';
 let palceholderTexts = ['Enter Phone Number', 'With Dial Code...' , '91 9876543210'];
 // On Keypress
-mobileNumberEl.addEventListener('keyup', e=> {
+mobileNumberEl.addEventListener('input', e=> {
+    mobileNumber = e.target.value;
+    if(e.data && e.data.length > 6){
+        mobileNumber = e.data;
+    }
 
-    mobileNumber = e.target.value.replace("+", "").replace(/ /g,'');
-    e.target.value = mobileNumber;
-    if (mobileNumber.length > 4) {
+   mobileNumber = mobileNumber.replace("+", "").replace(/ /g,'');
+    
+    if (mobileNumber.length > 6) {
         sendBtn.removeAttribute('disabled');
         // open whatsApp on enter press 
+        console.log(mobileNumber);
         if(e.key == "Enter" || e.keyCode == 13){
             openWhatsApp()
         }
