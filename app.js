@@ -9,7 +9,8 @@ let palceholderTexts = ['Enter Phone Number', 'With Dial Code...' , '91 98765432
 mobileNumberEl.addEventListener('keyup', e=> {
 
     mobileNumber = e.target.value.replace("+", "").replace(/ /g,'');
-    if (mobileNumber.length > 5) {
+    e.target.value = mobileNumber;
+    if (mobileNumber.length > 4) {
         sendBtn.removeAttribute('disabled');
         // open whatsApp on enter press 
         if(e.key == "Enter" || e.keyCode == 13){
