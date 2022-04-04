@@ -17,7 +17,6 @@ mobileNumberEl.addEventListener('input', e=> {
     if (mobileNumber.length > 6) {
         sendBtn.removeAttribute('disabled');
         // open whatsApp on enter press 
-        console.log(mobileNumber);
         if(e.key == "Enter" || e.keyCode == 13){
             openWhatsApp()
         }
