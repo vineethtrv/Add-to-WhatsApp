@@ -80,7 +80,7 @@ header{
 .form{
     display: flex;
     width: 90%;
-    padding: 0;
+    padding: 0 20px;
     max-width: 740px;
     position: relative; 
     font-size: 2rem;
@@ -118,15 +118,19 @@ margin: 0;
 
 input::-webkit-input-placeholder { 
   color: #c4c4c4;
+  font-size: 1.9rem
 }
 input::-moz-placeholder { 
   color: #c4c4c4;
+  font-size: 1.9rem
 }
 input:-ms-input-placeholder { 
     color: #c4c4c4;
+    font-size: 1.9rem
 }
 input:-moz-placeholder {
     color: #c4c4c4;
+    font-size: 1.9rem
 }
 
 
