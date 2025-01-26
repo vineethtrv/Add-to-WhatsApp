@@ -1,5 +1,5 @@
 * , *::after , *::before {
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 :root{
     font-size: 1vw;
